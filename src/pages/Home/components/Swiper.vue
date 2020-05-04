@@ -22,11 +22,11 @@ export default {
       SwiperImgs: [
         {
           id: '01',
-          url: '//img1.qunarzz.com/sight/p0/1603/ee/ee3013caaa28ae7490.water.jpg_256x160_81b949d0.jpg'
+          url: 'https://imgs.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg'
 
         }, {
           id: '02',
-          url: '//img1.qunarzz.com/sight/p0/1503/cd/cd023b889435b33.water.jpg_256x160_737bffe3.jpg'
+          url: 'https://imgs.qunarzz.com/sight/source/1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg'
 
         }]
     }
@@ -37,15 +37,13 @@ export default {
 <style lang='stylus' scoped>
 .wrapper >>> .swiper-pagination-bullet-active
   background: #fff
-
 .wrapper
   overflow: hidden
   width: 100%
   height: 0
-  padding-bottom: 50%
+  padding-bottom: 36.64%
   background: #eee
-
   .swiper-img
+    overflow: hidden
     width: 100%
-    height: 175px
 </style>

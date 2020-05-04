@@ -58,10 +58,6 @@ export default {
           id: '08',
           url: '//s.qunarzz.com/homenode/images/touchheader/train.png',
           text: 'icon-eight'
-        }, {
-          id: '09',
-          url: '//s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          text: 'icon-nine'
         }
       ]
     }
@@ -89,33 +85,35 @@ export default {
 .wrapper >>> .swiper-container
   height: 0
   padding-bottom: 50%
-.icon-block
-  position: relative
-  width: 25%
-  height: 0
-  padding-bottom: 25%
-  float: left
-  .icon-img
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0.44rem
-    padding: 0.1rem
-    box-box-sizing: border-box
-    .img
-      display: block
-      margin: 0 auto
-      height: 100%
-  .icon-text
-    position: absolute
-    text-align: center
-    left: 0
-    right: 0
-    bottom: 0
-    height: 0.44rem
-    padding: 0 0.08rem
-    line-height: 0.44rem
-    color: $darkTextColor
-    ellipsis()
+.wrapper
+  margin-top: 0.12rem
+  .icon-block
+    position: relative
+    width: 25%
+    height: 0
+    padding-bottom: 25%
+    float: left
+    .icon-img
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0.44rem
+      padding: 0.1rem
+      box-box-sizing: border-box
+      .img
+        display: block
+        margin: 0 auto
+        height: 100%
+    .icon-text
+      position: absolute
+      text-align: center
+      left: 0
+      right: 0
+      bottom: 0
+      height: 0.44rem
+      padding: 0 0.08rem
+      line-height: 0.44rem
+      color: $darkTextColor
+      ellipsis()
 </style>
