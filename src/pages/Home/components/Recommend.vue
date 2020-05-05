@@ -2,13 +2,13 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="img-block">
-          <img class="img" :src="item.url" />
+          <img class="img" :src="item.imgUrl" />
         </div>
         <div class="text-block">
           <p class="img-title">{{item.title}}</p>
-          <p class="img-text">{{item.text}}</p>
+          <p class="img-text">{{item.desc}}</p>
           <button class="img-button">查看详情</button>
         </div>
       </li>
@@ -19,30 +19,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        url: 'https://imgs.qunarzz.com/sight/p0/1508/2e/d9363ce50a88c8c5ff5a138c67687cd4.water.jpg_200x200_1c15c8f5.jpg',
-        title: '深圳野生动物园',
-        text: '深圳野生动物园深圳野生动物园深圳野生动物园'
-      }, {
-        id: '002',
-        url: 'https://imgs.qunarzz.com/sight/p0/1508/2e/d9363ce50a88c8c5ff5a138c67687cd4.water.jpg_200x200_1c15c8f5.jpg',
-        title: '深圳野生动物园',
-        text: '深圳野生动物园深圳野生动物园深圳野生动物园'
-      }, {
-        id: '003',
-        url: 'https://imgs.qunarzz.com/sight/p0/1508/2e/d9363ce50a88c8c5ff5a138c67687cd4.water.jpg_200x200_1c15c8f5.jpg',
-        title: '深圳野生动物园',
-        text: '深圳野生动物园深圳野生动物园深圳野生动物园'
-      }, {
-        id: '004',
-        url: 'https://imgs.qunarzz.com/sight/p0/1508/2e/d9363ce50a88c8c5ff5a138c67687cd4.water.jpg_200x200_1c15c8f5.jpg',
-        title: '深圳野生动物园',
-        text: '深圳野生动物园深圳野生动物园深圳野生动物园'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

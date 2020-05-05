@@ -1,12 +1,12 @@
 <template>
   <div class="wrapper">
-    <swiper>
+    <swiper :options="swiperOptions">
       <swiper-slide v-for="(page,index) of pages" :key="index">
         <div class="icon-block" v-for="item of page" :key="item.id">
           <div class="icon-img">
-            <img class="img" :src="item.url" />
+            <img class="img" :src="item.imgUrl" />
           </div>
-          <p class="icon-text">{{item.text}}</p>
+          <p class="icon-text">{{item.desc}}</p>
         </div>
       </swiper-slide>
     </swiper>
@@ -16,56 +16,21 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      icons: [
-        {
-          id: '01',
-          url: '//s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          text: '景点门票景点门票'
-        },
-        {
-          id: '02',
-          url: '//s.qunarzz.com/homenode/images/touchheader/flight.png',
-          text: 'icon-two'
-        },
-        {
-          id: '03',
-          url: '//s.qunarzz.com/homenode/images/touchheader/train.png',
-          text: 'icon-three'
-        },
-        {
-          id: '04',
-          url: '//s.qunarzz.com/homenode/images/touchheader/package.png',
-          text: 'icon-four'
-        },
-        {
-          id: '05',
-          url: '//s.qunarzz.com/homenode/images/touchheader/piao.png',
-          text: 'icon-five'
-        },
-        {
-          id: '06',
-          url: '//s.qunarzz.com/homenode/images/touchheader/hotel.png',
-          text: 'icon-six'
-        },
-        {
-          id: '07',
-          url: '//s.qunarzz.com/homenode/images/touchheader/flight.png',
-          text: 'icon-seven'
-        },
-        {
-          id: '08',
-          url: '//s.qunarzz.com/homenode/images/touchheader/train.png',
-          text: 'icon-eight'
-        }
-      ]
+      swiperOptions: {
+        // 不自动滚动到第二页
+        autoplay: false
+      }
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.icons.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         // when pages[page] doesn't exist
         if (!pages[page]) {

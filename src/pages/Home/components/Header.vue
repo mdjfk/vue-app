@@ -7,7 +7,7 @@
       <span class="iconfont">&#xe632;</span>输入
     </div>
     <div class="header-right">
-      北京
+      {{this.city}}
       <span class="iconfont arrow">&#xe64a;</span>
     </div>
   </div>
@@ -15,24 +15,24 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
 <style lang='stylus' scoped>
 @import '~styles/variables.styl'
-
 .header
   background-color: $bgColor
   line-height: 0.86rem
   display: flex
   color: #fff
-
   .header-left
     float: left
     width: 0.64rem
     text-align: center
-
   .header-input
     flex: 1
     background-color: #fff
@@ -43,12 +43,10 @@ export default {
     height: 0.64rem
     line-height: 0.64rem
     color: #ccc
-
   .header-right
     float: right
     width: 1.24rem
     text-align: center
-
     .arrow
       margin-left: -0.04rem
       font-size: 0.2rem

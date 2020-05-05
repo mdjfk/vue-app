@@ -4,11 +4,11 @@
     <ul>
       <li class="item" v-for="item of list" :key="item.id">
         <div class="img-block">
-          <img class="img" :src="item.url" />
+          <img class="img" :src="item.imgUrl" />
         </div>
         <div class="text-block">
           <p class="img-title">{{item.title}}</p>
-          <p class="img-text">{{item.text}}</p>
+          <p class="img-text">{{item.desc}}</p>
         </div>
       </li>
     </ul>
@@ -18,30 +18,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      list: [{
-        id: '001',
-        url: 'https://imgs.qunarzz.com/sight/source/1507/d9/2ddc7652fdba16.jpg_r_640x214_5e62f1a3.jpg',
-        title: '深圳野生动物园',
-        text: '深圳野生动物园深圳野生动物园深圳野生动物园'
-      }, {
-        id: '002',
-        url: 'https://imgs.qunarzz.com/sight/source/1507/d9/2ddc7652fdba16.jpg_r_640x214_5e62f1a3.jpg',
-        title: '深圳野生动物园',
-        text: '深圳野生动物园深圳野生动物园深圳野生动物园'
-      }, {
-        id: '003',
-        url: 'https://imgs.qunarzz.com/sight/source/1507/d9/2ddc7652fdba16.jpg_r_640x214_5e62f1a3.jpg',
-        title: '深圳野生动物园',
-        text: '深圳野生动物园深圳野生动物园深圳野生动物园'
-      }, {
-        id: '004',
-        url: 'https://imgs.qunarzz.com/sight/source/1507/d9/2ddc7652fdba16.jpg_r_640x214_5e62f1a3.jpg',
-        title: '深圳野生动物园',
-        text: '深圳野生动物园深圳野生动物园深圳野生动物园'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -57,7 +35,7 @@ export default {
   .img-block
     overflow: hidden
     height: 0
-    padding-bottom: 37.67%
+    padding-bottom: 37.09%
     .img
       width: 100%
   .text-block
