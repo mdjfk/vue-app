@@ -7,6 +7,7 @@
   </div>
 </template>
 <script>
+import axios from 'axios'
 import CityHeader from './components/Header'
 import CitySearch from './components/Search'
 import CityList from './components/List'
@@ -18,6 +19,17 @@ export default {
     CitySearch,
     CityList,
     CityAlphabet
+  },
+  methods: {
+    getCityInfo () {
+      axios.get('/api/city.json').then(this.getCityInfoSucc)
+    },
+    getCityInfoSucc (res) {
+      console.log(res)
+    }
+  },
+  mounted () {
+    this.getCityInfo()
   }
 }
 </script>
