@@ -1,45 +1,19 @@
 <template>
   <ul class="list">
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-
-    <li class="item">Z</li>
+    <li class="item" v-for="(item,key) of alphabet" :key="key">{{key}}</li>
   </ul>
 </template>
 <script>
 export default {
-  name: 'CityAlphabet'
+  name: 'CityAlphabet',
+  props: {
+    alphabet: Object
+  }
 }
 </script>
 <style lang="stylus" scoped>
 @import '~styles/variables.styl'
+
 .list
   position: absolute
   top: 1.58rem
@@ -50,6 +24,7 @@ export default {
   align-items: center
   justify-content: center
   flex-direction: column
+
   .item
     line-height: 0.42rem
     color: $bgColor
