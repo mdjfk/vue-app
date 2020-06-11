@@ -7,7 +7,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state,
-  mutations
+  mutations,
+  // 展示getters用法
+  getters: {
+    doubleCity (state) {
+      return state.city + ' ' + state.city
+    }
+  }
   // actions: {
   //   changeCity (ctx, city) {
   //     ctx.commit('changeCity', city)

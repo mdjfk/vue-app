@@ -16,11 +16,13 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'HomeHeader',
   computed: {
-    ...mapState(['city'])
+    ...mapState(['city']),
+    // 展示getters用法
+    ...mapGetters(['doubleCity'])
   }
 }
 </script>
