@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header-left">
-      <div class="iconfont">&#xe624;</div>
+      <div class="iconfont back-icon">&#xe624;</div>
     </div>
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>输入
@@ -29,18 +29,17 @@ export default {
 
 <style lang='stylus' scoped>
 @import '~styles/variables.styl'
-
 .header
   background-color: $bgColor
   line-height: 0.86rem
   display: flex
   color: #fff
-
   .header-left
     float: left
     width: 0.64rem
     text-align: center
-
+    .back-icon
+      font-size: 0.4rem
   .header-input
     flex: 1
     background-color: #fff
@@ -51,14 +50,12 @@ export default {
     height: 0.64rem
     line-height: 0.64rem
     color: #ccc
-
   .header-right
     float: right
     min-width: 1.04rem
     padding: 0 0.1rem
     text-align: center
     color: #fff
-
     .arrow
       margin-left: -0.04rem
       font-size: 0.2rem
