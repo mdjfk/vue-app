@@ -12,7 +12,6 @@
 </template>
 
 <script>
-// import CommonGallery from 'common/gallery/Gallery'
 export default {
   name: 'DetailHeader',
   data () {
@@ -32,15 +31,17 @@ export default {
         let opacity = top / 160
         opacity = opacity > 1 ? 1 : opacity
         this.opacityStyle.opacity = opacity
-        // this.opacityStyle = {opacity}
+        // this.opacityStyle = {opacity}   // what's the difference?
       } else {
         this.showAbs = true
       }
-      // this.showAbs = top <= 50
     }
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
