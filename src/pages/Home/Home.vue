@@ -61,8 +61,6 @@ export default {
     this.getHomeInfo()
   },
   activated () {
-    // 每次回到首页都滚动到最顶部
-    document.documentElement.scrollTop = 0
     if (this.lastCity !== this.city) {
       this.lastCity = this.city
       this.getHomeInfo()

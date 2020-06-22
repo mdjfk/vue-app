@@ -19,5 +19,12 @@ export default new Router({
     path: '/detail/:id',
     name: 'Detail',
     component: Detail
-  }]
+  }],
+  // 每次路由切换都滚动到最顶部 但是对City页面不生效？
+  scrollBehavior (to, from, savedPosition) {
+    return {
+      x: 0,
+      y: 0
+    }
+  }
 })

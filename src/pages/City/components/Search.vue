@@ -1,9 +1,18 @@
 <template>
   <div>
     <div class="search">
-      <input v-model="keyword" type="text" class="input-block" placeholder="输入城市名或拼音" />
+      <input
+        v-model="keyword"
+        type="text"
+        class="input-block"
+        placeholder="输入城市名或拼音"
+      />
     </div>
-    <div class="search-list" v-show="keyword" ref="search">
+    <div
+      class="search-list"
+      v-show="keyword"
+      ref="search"
+    >
       <ul>
         <li
           class="search-list-item border-bottom"
@@ -11,7 +20,10 @@
           :key="item.id"
           @click="handleCityClick(item.name)"
         >{{item.name}}</li>
-        <li class="search-list-item border-bottom" v-show="hasNoData">没有找到匹配城市</li>
+        <li
+          class="search-list-item border-bottom"
+          v-show="hasNoData"
+        >没有找到匹配城市</li>
       </ul>
     </div>
   </div>
@@ -59,7 +71,6 @@ export default {
             })
           }
           this.result = matches
-          this.scroll.scrollToElement(this.$refs.search)
         }, 100)
       }
     }
