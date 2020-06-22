@@ -1,9 +1,18 @@
 <template>
   <div>
-    <router-link class="header-abs" tag="div" to="/" v-show="showAbs">
+    <router-link
+      class="header-abs"
+      tag="div"
+      to="/"
+      v-show="showAbs"
+    >
       <div class="iconfont back-icon">&#xe624;</div>
     </router-link>
-    <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
+    <div
+      class="header-fixed"
+      v-show="!showAbs"
+      :style="opacityStyle"
+    >
       <router-link to="/">
         <div class="iconfont header-left">&#xe624;</div>
       </router-link>景点详情
@@ -48,6 +57,7 @@ export default {
 
 <style lang='stylus' scoped>
 @import '~styles/variables.styl'
+
 .header-abs
   position: absolute
   top: 0.2rem
@@ -59,9 +69,12 @@ export default {
   text-align: center
   background: rgba(0, 0, 0, 0.6)
   color: white
+
   .back-icon
     font-size: 0.4rem
+
 .header-fixed
+  z-index: 2
   position: fixed
   top: 0
   left: 0
@@ -73,6 +86,7 @@ export default {
   overflow: hidden
   font-size: 0.32rem
   text-align: center
+
   .header-left
     position: absolute
     top: 0
